@@ -1,0 +1,13 @@
+#!/bin/sh
+export PATH="/bin:/sbin:/usr/sbin:/usr/bin"
+
+if [ ! -e /tmp/pptp_oldgw ]; then
+        exit 0
+fi
+
+OLDGW=`cat /tmp/pptp_oldgw`
+route delete 106.75.0.0/16 ${OLDGW} # gitlab
+route delete 123.59.0.0/16 ${OLDGW} # yapi
+
+
+rm /tmp/pptp_oldgw

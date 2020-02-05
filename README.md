@@ -4,15 +4,17 @@
 
 1. 设置 -> 网络 -> 目标VPN -> 高级 -> 取消勾选`通过VPN连接发送所有流量`
 2. 将`blacklist`下的两个文件复制到`/etc/ppp/`下
-3. 修改脚本中的ip规则
-4. 重连vpn即可
+3. `sudo chmod a+x /etc/ppp/ip-up /etc/ppp/ip-down`
+4. 修改脚本中的ip规则
+5. 重连vpn即可
 
 ## 白名单模式
 
 1. 设置 -> 网络 -> 目标VPN -> 高级 -> 勾选`通过VPN连接发送所有流量`
 2. 将`whitelist`下的两个文件复制到`/etc/ppp/`下
-3. 修改脚本中的ip规则
-4. 重连vpn即可
+3. `sudo chmod a+x /etc/ppp/ip-up /etc/ppp/ip-down`
+4. 修改脚本中的ip规则
+5. 重连vpn即可
 
 ## 具体实现
 来源于[chnroutes](https://github.com/fivesheep/chnroutes)，白名单模式未改动chnroutes的脚本，
